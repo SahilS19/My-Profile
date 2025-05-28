@@ -85,6 +85,34 @@
       background-color: #007BFF;
       color: white;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .resume-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 200px;
+    }
+
+    .resume-buttons a {
+      display: inline-block;
+      text-align: center;
+      padding: 10px;
+      background-color: #00BFFF;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .resume-buttons a:hover {
+      background-color: #1e90ff;
+      transform: scale(1.05);
     }
 
     footer {
@@ -108,10 +136,6 @@
       width: 30px;
       height: 30px;
       vertical-align: middle;
-    }
-
-    .resume-link {
-      margin-top: 10px;
     }
 
     @keyframes fadeIn {
@@ -139,11 +163,11 @@
 <body>
   <header>
     <img src="Sarthak_Raj.png" alt="Sarthak Raj" class="profile-pic" />
-    <div class="intro">Sarthak Raj<br/><span style="font-size: 20px; font-weight: normal;">Frontend Web Developer</span></div>
+    <div class="intro">Sarthak Raj<br/><span style="font-size: 20px; font-weight: normal;">Frontend Web Developer | Cloud Engineering</span></div>
     <div class="contact-info">
-      <div>Email: sarthakraj744@example.com</div>
+      <div>Email: sarthakraj744@gmail.com</div>
       <div>Contact: +91-8271421667</div>
-      <div><a href="https://www.linkedin.com/in/sarthak-raj08/">LinkedIn</a></div>
+      <div><a href="https://www.linkedin.com/in/sarthakraj08/" style="color:white;">LinkedIn</a></div>
     </div>
   </header>
 
@@ -154,16 +178,17 @@
 
   <section id="resume">
     <h2>Resume</h2>
-    <a href="resume.pdf" download class="resume-link" style="color: lightblue;">Download My Resume</a>
-    <br>
-    <a href="resume.pdf" target="_blank" class="resume-link" style="color: lightblue;">View My Resume</a>
+    <div class="resume-buttons">
+      <a href="resume.pdf" download>Download My Resume</a>
+      <a href="resume.pdf" target="_blank">View My Resume</a>
+    </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
     <ul>
-      <li>Class 10th - St Karen's High School, 2018, CBSE - 73.25%</li>
-      <li>Class 12th - St Dominic Savios High School, 2020, CBSE - 70%</li>
+      <li>Class 10th: St Karen's High School, 2018, CBSE - 73.25%</li>
+      <li>Class 12th: St Dominic Savios High School, 2020, CBSE - 70%</li>
       <li>B.Tech - Information Technology, JIS College of Engineering, 2021-2025 - Average CGPA: 7.55</li>
     </ul>
   </section>
@@ -173,8 +198,8 @@
     <div class="skills">
       <div class="skill-item"><img src="icons/html5.png" alt="HTML"><span>HTML</span></div>
       <div class="skill-item"><img src="icons/css3.png" alt="CSS"><span>CSS</span></div>
-      <div class="skill-item"><img src="icons/JavaScript.png" alt="SQL"><span>JavaScript</span></div>
-      <div class="skill-item"><img src="icons/sql.png" alt="DBMS"><span>SQL</span></div>
+      <div class="skill-item"><img src="icons/JavaScript.png" alt=JavaScript"><span>JavaScript</span></div>
+      <div class="skill-item"><img src="icons/sql.png" alt="SQL"><span>SQL</span></div>
       <div class="skill-item"><img src="icons/data-structure.png" alt="Data Structure"><span>Data Structure</span></div>
       <div class="skill-item"><img src="icons/github.png" alt="GitHub"><span>GitHub</span></div>
       <div class="skill-item"><img src="icons/vscode.png" alt="VS Code"><span>VS Code</span></div>
@@ -184,6 +209,7 @@
     <ul class="soft-skills">
       <li>Communication</li>
       <li>Teamwork</li>
+      <li>Leadership</li>
       <li>Problem-solving</li>
       <li>Adaptability</li>
       <li>Time Management</li>
